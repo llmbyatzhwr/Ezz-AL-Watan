@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عز الوطن لتوصيل الطلبات | Ezz Al Watan Delivery Services - دبي</title>
+    
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 Pro Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Three.js CDN للمشهد ثلاثي الأبعاد للطريق والسيارة -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#07090E',
+                        navyDark: '#0B0F19',
+                        navyCard: '#111726',
+                        goldLuxury: '#D4AF37',
+                        goldLight: '#F3E5AB',
+                        goldDark: '#997A15',
+                        cyanGlow: '#00E5FF',
+                        silverText: '#94A3B8'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 35px rgba(212, 175, 55, 0.3)',
+                        'gold-dramatic': '0 0 60px rgba(212, 175, 55, 0.45)',
+                        'cyan-glow': '0 0 30px rgba(0, 229, 255, 0.25)',
+                        'glass': '0 20px 50px rgba(0, 0, 0, 0.6)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS Styles for Cinematic Dark Luxury Logistics Theme -->
+    <style>
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            background-color: #07090E;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #07090E;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #D4AF37, #997A15);
+            border-radius: 4px;
+        }
+
+        /* Metallic Gold Gradient Text */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #FFF5C0 0%, #D4AF37 50%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Panel */
+        .glass-panel {
+            background: rgba(17, 23, 38, 0.78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .glass-panel-hover:hover {
+            background: rgba(22, 30, 49, 0.92);
+            border-color: rgba(212, 175, 55, 0.55);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.22);
+            transform: translateY(-4px);
+        }
+
+        /* Dramatic Gold Hero Wrapper */
+        .glass-gold {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.16) 0%, rgba(11, 15, 25, 0.92) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.42);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.18);
+        }
+
+        /* Animated Pulsing Ambient Glows */
+        .ambient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+            animation: orbFloat 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes orbFloat {
+            0% { transform: translateY(0px) scale(1); opacity: 0.4; }
+            100% { transform: translateY(-30px) scale(1.15); opacity: 0.7; }
+        }
+
+        /* Logo Glow Effect */
+        .logo-cinematic-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+            transition: all 0.5s ease;
+        }
+        .logo-cinematic-glow:hover {
+            box-shadow: 0 0 45px rgba(212, 175, 55, 0.85);
+        }
+
+        /* Floating WhatsApp Button Animation */
+        @keyframes pulseGreen {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .whatsapp-float {
+            animation: pulseGreen 2s infinite;
+        }
+
+        /* Photorealistic Courier Breathing & Cinematic Blend */
+        @keyframes courierBreathe {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-8px) scale(1.015); }
+        }
+        .courier-realistic-float {
+            animation: courierBreathe 6s ease-in-out infinite;
+        }
+        .courier-realistic-float-delayed {
+            animation: courierBreathe 6.5s ease-in-out 1.5s infinite;
+        }
+        /* دمج ناعم وانسيابي لصورتي عاملي التوصيل في الخلفية الداكنة بدون أي إطارات */
+        .courier-seamless-blend {
+            -webkit-mask-image: radial-gradient(ellipse 75% 80% at 50% 42%, rgba(0,0,0,1) 35%, rgba(0,0,0,0.45) 68%, rgba(0,0,0,0) 100%);
+            mask-image: radial-gradient(ellipse 75% 80% at 50% 42%, rgba(0,0,0,1) 35%, rgba(0,0,0,0.45) 68%, rgba(0,0,0,0) 100%);
+        }
+
+        /* Scroll Reveal Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered Delay for Grid Items */
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+
+        /* 3D Canvas Container - Fixed across entire scroll journey */
+        #three-road-canvas-container {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        #three-road-canvas-container canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-goldLuxury selection:text-obsidian">
+
+    <!-- 3D SCROLL-DRIVEN HIGHWAY & DELIVERY VAN CANVAS (تتحرك السيارة على الطريق ثلاثي الأبعاد مع التمرير من الأعلى للأسفل) -->
+    <div id="three-road-canvas-container" aria-hidden="true"></div>
+
+    <!-- TOP NAVIGATION BAR -->
+    <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto glass-panel rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between shadow-glass">
+            
+            <!-- Brand Identity with Circular Logo (80px x 80px) -->
+            <a href="#home" class="flex items-center gap-3.5 group">
+                <div class="relative w-[90px] h-[90px] rounded-full overflow-hidden border-2 border-goldLuxury logo-cinematic-glow bg-obsidian flex items-center justify-center shrink-0">
+                    <!-- ضيفي هنا رابط الشعار الدائري -->
+                    <img src="img/logo.jpg" onerror="this.src='https://placehold.co/120x120/07090E/D4AF37?text=EW'" alt="شعار عز الوطن الدائري" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg sm:text-xl font-black text-white leading-tight tracking-wide group-hover:text-goldLight transition-colors">عز الوطن لتوصيل الطلبات</span>
+                    <span class="text-[11px] font-bold text-goldLight/90 tracking-wider uppercase font-tajawal">Ezz Al Watan Delivery Services</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-bold text-slate-300">
+                <a href="#home" class="hover:text-goldLight transition-colors">الرئيسية</a>
+                <a href="#partners" class="hover:text-goldLight transition-colors">شركاء النجاح</a>
+                <a href="#advantages" class="hover:text-goldLight transition-colors">لماذا عز الوطن</a>
+                <a href="#services" class="hover:text-goldLight transition-colors">خدماتنا</a>
+                <a href="#vision" class="hover:text-goldLight transition-colors">الرؤية والقيم</a>
+                <a href="#contact" class="hover:text-goldLight transition-colors">تواصل معنا</a>
+            </nav>
+
+            <!-- Direct Contact Button & Mobile Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-goldLuxury to-goldDark text-obsidian font-extrabold text-xs shadow-gold-glow hover:brightness-110 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-phone-volume text-sm"></i>
+                    <span>تواصل معنا الان</span>
+                </a>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="القائمة الرئيسية" class="lg:hidden w-11 h-11 rounded-xl bg-navyCard border border-goldLuxury/30 text-goldLight flex items-center justify-center text-lg focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Responsive Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-3 max-w-7xl mx-auto glass-panel rounded-2xl p-5 border border-goldLuxury/30 space-y-3 font-bold text-sm text-slate-200">
+            <a href="#home" class="mobile-link block py-2 px-3 rounded-lg hover:bg-goldLuxury/10 hover:text-goldLight">الرئيسية</a>
+            <a href="#partners" class="mobile-link block py-2 px-3 rounded-lg hover:bg-goldLuxury/10 hover:text-goldLight">شركاء النجاح</a>
+            <a href="#advantages" class="mobile-link block py-2 px-3 rounded-lg hover:bg-goldLuxury/10 hover:text-goldLight">لماذا عز الوطن</a>
+            <a href="#services" class="mobile-link block py-2 px-3 rounded-lg hover:bg-goldLuxury/10 hover:text-goldLight">خدماتنا الأساسية</a>
+            <a href="#vision" class="mobile-link block py-2 px-3 rounded-lg hover:bg-goldLuxury/10 hover:text-goldLight">الرؤية والقيم</a>
+            <a href="#contact" class="mobile-link block py-2 px-3 rounded-lg hover:bg-goldLuxury/10 hover:text-goldLight">تواصل معنا والموقع</a>
+            <a href="https://wa.me/971568990866" target="_blank" class="block w-full py-3 text-center rounded-xl bg-[#25D366] text-obsidian font-black mt-2">
+                <i class="fa-brands fa-whatsapp text-lg ml-2"></i> تواصل عبر الواتساب مباشرة
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH PHOTOREALISTIC COURIERS ON BOTH SIDES & DRAMATIC LOGO -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 sm:px-8 overflow-hidden z-10">
+        
+        <!-- Subtle Video & Gradient Atmosphere Layer -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover scale-105 filter brightness-30 contrast-125 opacity-35">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-motorcycle-rider-delivering-a-package-at-night-42283-large.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-obsidian/85 via-obsidian/55 to-obsidian/90"></div>
+        </div>
+
+        <!-- Ambient Glow Orbs -->
+        <div class="ambient-orb top-1/4 right-10 w-[420px] h-[420px] bg-goldLuxury/20"></div>
+        <div class="ambient-orb bottom-10 left-10 w-[380px] h-[380px] bg-cyanGlow/15"></div>
+
+        <!-- =========================================================================
+             عامل التوصيل الأول (الجانب الأيمن العلوي) - مدمج في الخلفية بدون أي إطارات
+             ========================================================================= -->
+        <div class="hidden xl:block absolute top-20 right-0 2xl:right-6 z-10 w-[360px] 2xl:w-[430px] h-[520px] pointer-events-none select-none courier-realistic-float">
+            <!-- هالة إضاءة ذهبية خفيفة خلف عامل التوصيل لدمجه مع الخلفية -->
+            <div class="absolute top-16 inset-x-10 h-80 bg-gradient-to-tr from-goldLuxury/20 via-amber-500/10 to-transparent rounded-full blur-3xl"></div>
+            
+            <!-- صورة عامل التوصيل الأول مدمجة مباشرة في الخلفية بدون إطار -->
+            <div class="relative w-full h-full courier-seamless-blend">
+                <!-- ضيفي هنا رابط صورة عامل التوصيل الأول -->
+                <img 
+                    src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?auto=format&fit=crop&w=800&q=90" 
+                    onerror="this.src='https://placehold.co/600x800/07090E/D4AF37?text=Courier+1'"
+                    alt="عامل توصيل عز الوطن بزي التوصيل الرسمي" 
+                    class="w-full h-full object-cover object-top opacity-75 mix-blend-lighten filter contrast-110 brightness-90"
+                >
+                <!-- تدرج إضافي لتذويب الحواف السفلية والجانبية تماماً في لون الخلفية -->
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/60"></div>
+                <div class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-obsidian/90"></div>
+            </div>
+        </div>
+
+        <!-- =========================================================================
+             عامل التوصيل الثاني (الجانب الأيسر العلوي) - مدمج في الخلفية بدون أي إطارات
+             ========================================================================= -->
+        <div class="hidden xl:block absolute top-20 left-0 2xl:left-6 z-10 w-[360px] 2xl:w-[430px] h-[520px] pointer-events-none select-none courier-realistic-float-delayed">
+            <!-- هالة إضاءة ذهبية وسماوية خفيفة خلف عامل التوصيل لدمجه مع الخلفية -->
+            <div class="absolute top-16 inset-x-10 h-80 bg-gradient-to-tl from-goldLuxury/20 via-cyanGlow/10 to-transparent rounded-full blur-3xl"></div>
+            
+            <!-- صورة عامل التوصيل الثاني مدمجة مباشرة في الخلفية بدون إطار -->
+            <div class="relative w-full h-full courier-seamless-blend">
+                <!-- ضيفي هنا رابط صورة عامل التوصيل الثاني -->
+                <img 
+                    src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=800&q=90" 
+                    onerror="this.src='https://placehold.co/600x800/07090E/D4AF37?text=Courier+2'"
+                    alt="مندوب توصيل عز الوطن السريع في دبي" 
+                    class="w-full h-full object-cover object-top opacity-75 mix-blend-lighten filter contrast-110 brightness-90"
+                >
+                <!-- تدرج إضافي لتذويب الحواف السفلية والجانبية تماماً في لون الخلفية -->
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/60"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-obsidian/90"></div>
+            </div>
+        </div>
+
+        <!-- عرض مدمج لعاملي التوصيل بدون إطارات على الشاشات المتوسطة والصغيرة -->
+        <div class="w-full max-w-5xl mx-auto text-center flex flex-col items-center relative z-20">
+            
+            <div class="xl:hidden grid grid-cols-2 gap-2 w-full max-w-md mb-4 pointer-events-none select-none reveal">
+                <!-- عامل التوصيل الأول للموبايل مدمج في الخلفية -->
+                <div class="h-44 sm:h-52 courier-seamless-blend relative">
+                    <!-- ضيفي هنا رابط صورة عامل التوصيل الأول -->
+                    <img 
+                        src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?auto=format&fit=crop&w=600&q=85" 
+                        onerror="this.src='https://placehold.co/400x500/07090E/D4AF37?text=Courier+1'"
+                        alt="عامل توصيل عز الوطن" 
+                        class="w-full h-full object-cover object-top opacity-75 mix-blend-lighten"
+                    >
+                </div>
+
+                <!-- عامل التوصيل الثاني للموبايل مدمج في الخلفية -->
+                <div class="h-44 sm:h-52 courier-seamless-blend relative">
+                    <!-- ضيفي هنا رابط صورة عامل التوصيل الثاني -->
+                    <img 
+                        src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=600&q=85" 
+                        onerror="this.src='https://placehold.co/400x500/07090E/D4AF37?text=Courier+2'"
+                        alt="مندوب توصيل عز الوطن" 
+                        class="w-full h-full object-cover object-top opacity-75 mix-blend-lighten"
+                    >
+                </div>
+            </div>
+
+          <!-- DRAMATIC WIDE LOGO INTEGRATION (إظهار الرسم والكتابة فقط ودمج الخلفية) -->
+<div class="relative mb-6 w-full max-w-2xl mx-auto group reveal flex items-center justify-center">
+    <!-- توهج خلفي خفيف يبرز الكتابة والرسم الذهبي -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.22)_0%,transparent_70%)] blur-2xl pointer-events-none"></div>
+
+    <!-- الشعار بدون إطار أو صندوق -->
+    <div class="relative w-full flex items-center justify-center">
+        <!-- ضيفي هنا رابط الشعار العريض -->
+        <img src="img/logo1.jpg"
+             alt="شعار عز الوطن العريض لخدمات التوصيل"
+             style="-webkit-mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 58%, rgba(0,0,0,0.35) 82%, transparent 100%); mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 58%, rgba(0,0,0,0.35) 82%, transparent 100%);"
+             class="w-full h-auto max-h-52 sm:max-h-64 object-contain mix-blend-lighten contrast-150 brightness-110 drop-shadow-[0_4px_20px_rgba(212,175,55,0.35)] transform group-hover:scale-[1.03] transition-transform duration-700">
+    </div>
+</div>
+            <!-- Luxury Sub-Badge -->
+            <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-panel border border-goldLuxury/40 mb-6 reveal">
+                <span class="w-2.5 h-2.5 rounded-full bg-cyanGlow animate-ping"></span>
+                <span class="text-xs sm:text-sm font-extrabold text-goldLight tracking-wide">الريادة اللوجستية في إمارة دبي • خدمات التوصيل الفاخرة 24/7</span>
+            </div>
+
+            <!-- Main Dramatic Title -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6 reveal reveal-delay-1 drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
+                سرعة بلا حدود • <span class="text-gradient-gold">أمان واحترافية</span> تليق بعز الوطن
+            </h1>
+
+            <!-- Subtitle Description -->
+            <p class="max-w-2xl text-slate-200 text-sm sm:text-lg leading-relaxed font-tajawal mb-10 reveal reveal-delay-2 bg-obsidian/50 backdrop-blur-sm px-4 py-2 rounded-2xl">
+                نقدم حلول توصيل متكاملة وفائقة السرعة للمتاجر، المنصات العالمية، والشركات في دبي عبر أسطول حديث مجهز بأحدث تقنيات التتبع والالتزام التام بالمواعيد.
+            </p>
+
+            <!-- Call-to-Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16 reveal reveal-delay-3">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-goldLuxury via-goldLight to-goldDark text-obsidian font-black text-base shadow-gold-dramatic hover:brightness-110 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-headset text-lg"></i>
+                    <span>تواصل معنا الآن</span>
+                </a>
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel border border-goldLuxury/40 text-white font-extrabold text-base hover:bg-goldLuxury/20 hover:border-goldLuxury transition-all flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-boxes-stacked text-goldLight text-lg"></i>
+                    <span>استكشف خدماتنا</span>
+                </a>
+            </div>
+
+            <!-- Quick Stats Bar -->
+            <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 glass-panel p-6 rounded-3xl border border-goldLuxury/25 reveal shadow-glass">
+                <div class="text-center p-3">
+                    <div class="text-2xl sm:text-3xl font-black text-goldLight">100%</div>
+                    <div class="text-xs text-slate-300 font-bold font-tajawal mt-1">تغطية شاملة لإمارة دبي</div>
+                </div>
+                <div class="text-center p-3 border-r border-white/10">
+                    <div class="text-2xl sm:text-3xl font-black text-cyanGlow">24 / 7</div>
+                    <div class="text-xs text-slate-300 font-bold font-tajawal mt-1">تشغيل ودعم مستمر</div>
+                </div>
+                <div class="text-center p-3 border-r border-white/10">
+                    <div class="text-2xl sm:text-3xl font-black text-goldLight">حديث</div>
+                    <div class="text-xs text-slate-300 font-bold font-tajawal mt-1">أسطول دراجات وسيارات</div>
+                </div>
+                <div class="text-center p-3 border-r border-white/10">
+                    <div class="text-2xl sm:text-3xl font-black text-cyanGlow">دقيقة</div>
+                    <div class="text-xs text-slate-300 font-bold font-tajawal mt-1">دقة وموثوقية في المواعيد</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS PARTNERS SECTION -->
+    <section id="partners" class="relative z-10 py-20 px-4 sm:px-8 border-y border-white/10 bg-navyDark/75 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <span class="text-xs font-extrabold tracking-widest uppercase text-goldLight bg-goldLuxury/10 px-4 py-1.5 rounded-full border border-goldLuxury/30">
+                    المنصات والشركات العالمية
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white mt-4">
+                    شركاء <span class="text-gradient-gold">النجاح والتميز</span> في الإمارات
+                </h2>
+            </div>
+
+            <!-- Grid of Partner Cards -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                
+                <!-- Partner 1: Talabat -->
+                <div class="glass-panel p-5 rounded-2xl border border-goldLuxury/20 flex flex-col items-center justify-center text-center hover:border-goldLuxury transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base">طلبات</span>
+                    <span class="text-[11px] text-slate-400 font-tajawal">Talabat</span>
+                </div>
+
+                <!-- Partner 2: Noon -->
+                <div class="glass-panel p-5 rounded-2xl border border-goldLuxury/20 flex flex-col items-center justify-center text-center hover:border-goldLuxury transition-all duration-300 group reveal reveal-delay-1">
+                    <div class="w-14 h-14 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base">نون</span>
+                    <span class="text-[11px] text-slate-400 font-tajawal">Noon Food & Daily</span>
+                </div>
+
+                <!-- Partner 3: Deliveroo -->
+                <div class="glass-panel p-5 rounded-2xl border border-goldLuxury/20 flex flex-col items-center justify-center text-center hover:border-goldLuxury transition-all duration-300 group reveal reveal-delay-2">
+                    <div class="w-14 h-14 rounded-full bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base">ديليفرو</span>
+                    <span class="text-[11px] text-slate-400 font-tajawal">Deliveroo</span>
+                </div>
+
+                <!-- Partner 4: Carrefour -->
+                <div class="glass-panel p-5 rounded-2xl border border-goldLuxury/20 flex flex-col items-center justify-center text-center hover:border-goldLuxury transition-all duration-300 group reveal reveal-delay-3">
+                    <div class="w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base">كارفور</span>
+                    <span class="text-[11px] text-slate-400 font-tajawal">Carrefour UAE</span>
+                </div>
+
+                <!-- Partner 5: Amazon -->
+                <div class="glass-panel p-5 rounded-2xl border border-goldLuxury/20 flex flex-col items-center justify-center text-center hover:border-goldLuxury transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-amazon"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base">أمازون</span>
+                    <span class="text-[11px] text-slate-400 font-tajawal">Amazon UAE</span>
+                </div>
+
+                <!-- Partner 6: Keeta -->
+                <div class="glass-panel p-5 rounded-2xl border border-goldLuxury/20 flex flex-col items-center justify-center text-center hover:border-goldLuxury transition-all duration-300 group reveal reveal-delay-1">
+                    <div class="w-14 h-14 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base">كيتا</span>
+                    <span class="text-[11px] text-slate-400 font-tajawal">Keeta Delivery</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY Ezz AL WATAN (ADVANTAGES) SECTION -->
+    <section id="advantages" class="relative z-10 py-24 px-4 sm:px-8 overflow-hidden bg-obsidian/65">
+        <div class="ambient-orb top-1/3 right-5 w-96 h-96 bg-goldLuxury/10"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs font-extrabold tracking-widest uppercase text-goldLight bg-goldLuxury/10 px-4 py-1.5 rounded-full border border-goldLuxury/30">
+                    لماذا نتميز في دبي
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4">
+                    مميزات تنافسية تضمن <span class="text-gradient-gold">نجاح أعمالكم</span>
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-3 font-tajawal">
+                    نجمع بين السرعة الفائقة، الأمان التام للشحنات، والكفاءة التشغيلية العالية في جميع مناطق دبي.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Advantage 1: Motorcycle & Car Fleet -->
+                <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-goldLuxury/30 transition-all duration-300 group reveal">
+                    <div class="w-16 h-16 rounded-2xl bg-goldLuxury/15 border border-goldLuxury/40 flex items-center justify-center text-goldLight text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-3">أسطول دراجات وسيارات حديث</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed font-tajawal">
+                        أسطول متكامل ومتنوع من الدراجات النارية والسيارات الحديثة المجهزة بصناديق حرارية للحفاظ على جودة الطلبات.
+                    </p>
+                </div>
+
+                <!-- Advantage 2: Rapid Response & Punctuality -->
+                <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-goldLuxury/30 transition-all duration-300 group reveal reveal-delay-1">
+                    <div class="w-16 h-16 rounded-2xl bg-cyanGlow/15 border border-cyanGlow/40 flex items-center justify-center text-cyanGlow text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-stopwatch-20"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-3">سرعة فائقة والتزام محدد</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed font-tajawal">
+                        أنظمة توجيه ذكية لاختيار أسرع المسارات وتفادي الزحام لضمان وصول الطلب في الوقت المحدد تماماً.
+                    </p>
+                </div>
+
+                <!-- Advantage 3: Licensed Professional Riders -->
+                <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-goldLuxury/30 transition-all duration-300 group reveal reveal-delay-2">
+                    <div class="w-16 h-16 rounded-2xl bg-goldLuxury/15 border border-goldLuxury/40 flex items-center justify-center text-goldLight text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-3">سائقون محترفون ومدربون</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed font-tajawal">
+                        فريق عمل مرخص بالكامل ومدرّب على أعلى معايير السلامة، اللياقة المهنية، والتعامل الراقي مع العملاء.
+                    </p>
+                </div>
+
+                <!-- Advantage 4: Dubai Standards Compliance -->
+                <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-goldLuxury/30 transition-all duration-300 group reveal reveal-delay-3">
+                    <div class="w-16 h-16 rounded-2xl bg-cyanGlow/15 border border-cyanGlow/40 flex items-center justify-center text-cyanGlow text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-3">مطابقة معايير دبي 100%</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed font-tajawal">
+                        التزام كامل بالتشريعات واللوائح الصادرة عن هيئة الطرق والمواصلات (RTA) والجهات المعنية في إمارة دبي.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SERVICES SECTION -->
+    <section id="services" class="relative z-10 py-24 px-4 sm:px-8 bg-navyDark/80 backdrop-blur-md border-y border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs font-extrabold tracking-widest uppercase text-cyanGlow bg-cyanGlow/10 px-4 py-1.5 rounded-full border border-cyanGlow/30">
+                    حلول لوجستية شاملة
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4">
+                    خدماتنا <span class="text-gradient-gold">الأساسية</span>
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-3 font-tajawal">
+                    نلبي احتياجات المطاعم، المتاجر الإلكترونية، والشركات بخدمات توصيل مرنة ومخصصة.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Service 1: Restaurant & Store Instant Delivery -->
+                <div class="glass-panel rounded-3xl p-8 border border-goldLuxury/30 hover:border-goldLuxury transition-all duration-500 group flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-goldLuxury to-goldDark text-obsidian font-black flex items-center justify-center text-3xl mb-6 shadow-gold-glow group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">توصيل المطاعم والمتاجر</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed font-tajawal mb-6">
+                            خدمة توصيل فورية وسريعة لشحنات الأغذية والوجبات والمستلزمات اليومية مع الحفاظ الحراري التام والسرعة القصوى في التسليم.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-300 border-t border-white/10 pt-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-goldLight"></i> حقائب حفظ حراري متطورة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-goldLight"></i> تغطية ليلية ونهارية 24 ساعة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-goldLight"></i> تتبع فوري لمسار السائق</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Fleet Leasing & Corporate Contracts -->
+                <div class="glass-panel rounded-3xl p-8 border border-cyanGlow/40 hover:border-cyanGlow transition-all duration-500 group flex flex-col justify-between reveal reveal-delay-1">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyanGlow to-blue-600 text-obsidian font-black flex items-center justify-center text-3xl mb-6 shadow-cyan-glow group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">العقود التشغيلية للشركات</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed font-tajawal mb-6">
+                            توفير أساطيل مخصصة بدراجات وسائقين مرخصين ومجهزين بعقود تشغيلية شهرية وسنوية مرنة تلائم حجم أعمالكم.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-300 border-t border-white/10 pt-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyanGlow"></i> إشراف تشغيلي وإدارة كاملة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyanGlow"></i> استبدال فوري للمركبات والسائقين</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyanGlow"></i> أسعار خاصة للتطبيقات والمتاجر الكبيرة</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: E-commerce & Express Logistics -->
+                <div class="glass-panel rounded-3xl p-8 border border-goldLuxury/30 hover:border-goldLuxury transition-all duration-500 group flex flex-col justify-between reveal reveal-delay-2">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-goldLuxury to-goldDark text-obsidian font-black flex items-center justify-center text-3xl mb-6 shadow-gold-glow group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">شحنات التجارة الإلكترونية</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed font-tajawal mb-6">
+                            توصيل الطرود والمنتجات في نفس اليوم (Same-Day Delivery) في جميع أنحاء دبي والإمارات المجاورة بكفاءة وأمان تام.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-300 border-t border-white/10 pt-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-goldLight"></i> تسليم سريع في نفس اليوم</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-goldLight"></i> توقيع واستلام موثق إلكترونياً</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-goldLight"></i> إرجاع وإدارة الشحنات بسهولة</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION, MISSION & VALUES SECTION -->
+    <section id="vision" class="relative z-10 py-24 px-4 sm:px-8 overflow-hidden bg-obsidian/65">
+        <div class="ambient-orb bottom-1/4 left-5 w-96 h-96 bg-goldLuxury/10"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs font-extrabold tracking-widest uppercase text-goldLight bg-goldLuxury/10 px-4 py-1.5 rounded-full border border-goldLuxury/30">
+                    هويتنا والتزامنا
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4">
+                    الرؤية، والأهداف، <span class="text-gradient-gold">والقيم المهنية</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Our Vision -->
+                <div class="glass-panel p-8 rounded-3xl border border-goldLuxury/30 relative overflow-hidden group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-goldLuxury/15 border border-goldLuxury/40 text-goldLight flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-3">رؤيتنا المستقبليـة</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed font-tajawal">
+                        أن نكون الخيار الأول والنموذج الأكثر موثوقية وفخامة في قطاع توصيل الطلبات والخدمات اللوجستية السريعة على مستوى إمارة دبي ودولة الإمارات العربية المتحدة.
+                    </p>
+                </div>
+
+                <!-- Our Mission -->
+                <div class="glass-panel p-8 rounded-3xl border border-cyanGlow/30 relative overflow-hidden group reveal reveal-delay-1">
+                    <div class="w-14 h-14 rounded-2xl bg-cyanGlow/15 border border-cyanGlow/40 text-cyanGlow flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-3">أهدافنا الاستراتيجية</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed font-tajawal">
+                        توفير حلول لوجستية ذات اعتمادية عالية، تمكين عملائنا من النمو والانتشار، ورفع الكفاءة التشغيلية لأسطولنا باستخدام أفضل التقنيات الحديثة.
+                    </p>
+                </div>
+
+                <!-- Our Core Values -->
+                <div class="glass-panel p-8 rounded-3xl border border-goldLuxury/30 relative overflow-hidden group reveal reveal-delay-2">
+                    <div class="w-14 h-14 rounded-2xl bg-goldLuxury/15 border border-goldLuxury/40 text-goldLight flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-3">قيمنا المهنيــة</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed font-tajawal">
+                        الأمانة في التعامل، الالتزام المطلق بالمواعيد، الشفافية والاحترافية الكاملة، والاهتمام البالغ بتفاصيل تجربة العملاء وشركاء النجاح.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION (CLEANED SINGLE SECTION) -->
+    <section id="contact" class="relative z-10 py-24 px-4 sm:px-8 bg-navyDark/90 backdrop-blur-md border-t border-white/10 overflow-hidden">
+        <div class="ambient-orb top-1/3 left-1/4 w-96 h-96 bg-goldLuxury/10"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-cyanGlow bg-cyanGlow/10 px-4 py-1.5 rounded-full border border-cyanGlow/30">
+                    تواصل معنا وموقعنا في دبي
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4">
+                    قنوات التواصل <span class="text-gradient-gold">المباشر والرسمي</span>
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-3 font-tajawal">
+                    يسعدنا تواصلكم المباشر عبر روابط البريد الإلكتروني السريعة، الهاتف، أو زيارة مقرنا في دبي.
+                </p>
+            </div>
+
+            <!-- Contact Information Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
+                
+                <!-- Direct Email Action Cards (7 Columns) -->
+                <div class="lg:col-span-7 space-y-5 reveal">
+                    
+                    <!-- Direct Action Card: @info Email -->
+                    <a href="mailto:info.ezzalwatan@ezzalwatan.lumina-vault2.com?subject=استفسار%20-%20عز%20الوطن%20لتوصيل%20الطلبات" 
+                       class="glass-panel rounded-3xl p-6 sm:p-7 border border-goldLuxury/30 hover:border-goldLuxury hover:bg-goldLuxury/10 transition-all shadow-glass flex items-center justify-between gap-5 group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-goldLuxury to-goldDark text-obsidian font-black flex items-center justify-center text-2xl shadow-gold-glow group-hover:scale-110 transition-transform">
+                                @info
+                            </div>
+                            <div>
+                                <span class="text-xs font-extrabold text-goldLight uppercase tracking-wider font-tajawal">مراسلة الإدارة والاستفسارات العامة</span>
+                                <h3 class="text-lg sm:text-xl font-black text-white mt-1 flex items-center gap-2">
+                                    <span>البريد الرسمي للإدارة</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-goldLight group-hover:translate-x-[-3px] group-hover:translate-y-[-3px] transition-transform"></i>
+                                </h3>
+                                <p class="text-xs text-slate-300 mt-1 font-tajawal">انقر هنا لفتح البريد ومراسلة الإدارة مباشرة</p>
+                            </div>
+                        </div>
+                        <div class="hidden sm:flex items-center justify-center w-12 h-12 rounded-xl bg-goldLuxury/15 text-goldLight border border-goldLuxury/30 group-hover:bg-goldLuxury group-hover:text-obsidian transition-colors">
+                            <i class="fa-solid fa-paper-plane text-lg"></i>
+                        </div>
+                    </a>
+
+                    <!-- Direct Action Card: @hr Email -->
+                    <a href="mailto:hr.ezzalwatan@ezzalwatan.lumina-vault2.com?subject=طلب%20توظيف%20-%20عز%20الوطن%20لتوصيل%20الطلبات" 
+                       class="glass-panel rounded-3xl p-6 sm:p-7 border border-cyanGlow/30 hover:border-cyanGlow hover:bg-cyanGlow/10 transition-all shadow-glass flex items-center justify-between gap-5 group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-cyanGlow to-blue-600 text-obsidian font-black flex items-center justify-center text-2xl shadow-cyan-glow group-hover:scale-110 transition-transform">
+                                @hr
+                            </div>
+                            <div>
+                                <span class="text-xs font-extrabold text-cyanGlow uppercase tracking-wider font-tajawal">قسم التوظيف والموارد البشرية</span>
+                                <h3 class="text-lg sm:text-xl font-black text-white mt-1 flex items-center gap-2">
+                                    <span>البريد الرسمي للتوظيف</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyanGlow group-hover:translate-x-[-3px] group-hover:translate-y-[-3px] transition-transform"></i>
+                                </h3>
+                                <p class="text-xs text-slate-300 mt-1 font-tajawal">انقر هنا لإرسال طلب التوظيف والسيرة الذاتية فوراً</p>
+                            </div>
+                        </div>
+                        <div class="hidden sm:flex items-center justify-center w-12 h-12 rounded-xl bg-cyanGlow/15 text-cyanGlow border border-cyanGlow/30 group-hover:bg-cyanGlow group-hover:text-obsidian transition-colors">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Direct Phone & WhatsApp Actions Card (5 Columns) -->
+                <div class="lg:col-span-5 reveal reveal-delay-2">
+                    <div class="h-full glass-gold rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-extrabold text-goldLight tracking-widest uppercase">خدمة عملاء 24/7</span>
+                            <h3 class="text-2xl font-black text-white mt-2 mb-3">اتصال ومحادثة فورية</h3>
+                            <p class="text-slate-300 text-sm font-tajawal leading-relaxed mb-8">
+                                فريق الدعم الفني والعمليات بشركة عز الوطن جاهز للرد الفوري على اتصالاتكم واستفساراتكم على مدار الساعة.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- WhatsApp Action -->
+                            <a href="https://wa.me/971568990866" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366] text-[#25D366] hover:text-obsidian border border-[#25D366]/40 font-black text-sm transition-all flex items-center justify-between group">
+                                <span class="flex items-center gap-3">
+                                    <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
+                                    <span>محادثة واتساب فورية</span>
+                                </span>
+                                <span dir="ltr" class="font-bold">+971 56 899 0866</span>
+                            </a>
+
+                            <!-- Direct Phone Call Action -->
+                            <a href="tel:+971568990866" class="w-full py-4 px-5 rounded-xl bg-cyanGlow/15 hover:bg-cyanGlow text-cyanGlow hover:text-obsidian border border-cyanGlow/40 font-extrabold text-sm transition-all flex items-center justify-between group">
+                                <span class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone-volume text-xl group-hover:scale-110 transition-transform"></i>
+                                    <span>اتصال هاتفي مباشر</span>
+                                </span>
+                                <span dir="ltr" class="font-bold">+971 56 899 0866</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- REAL GOOGLE MAPS EMBEDDED LOCATION IN DEIRA DUBAI -->
+            <div id="location" class="glass-panel rounded-3xl p-4 sm:p-6 border border-goldLuxury/30 shadow-glass reveal">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-5 px-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-goldLuxury/15 border border-goldLuxury/40 flex items-center justify-center text-goldLight text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-white">مقر الشركة في إمارة دبي</h3>
+                            <p class="text-xs text-slate-300 font-tajawal mt-0.5">شارع بورسعيد، أمام ديرة سنتر، ديرة، دبي، الإمارات العربية المتحدة</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=Port+Said+Street+Deira+Dubai" target="_blank" class="px-4 py-2 rounded-xl bg-goldLuxury/10 hover:bg-goldLuxury text-goldLight hover:text-obsidian border border-goldLuxury/30 font-bold text-xs transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-diamond-turn-right"></i>
+                        <span>فتح في خرائط Google</span>
+                    </a>
+                </div>
+
+                <!-- Google Maps iFrame -->
+                <div class="w-full h-80 sm:h-[400px] rounded-2xl overflow-hidden border border-white/10 shadow-inner">
+                    <iframe 
+                        title="موقع شركة عز الوطن لتوصيل الطلبات دبي"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.283896500858!2d55.3268882!3d25.2619444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5cd5e14b51a5%3A0xb71a8a29a4303d8b!2sDeira%20City%20Centre%20Area%2C%20Port%20Said%2C%20Dubai!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae" 
+                        class="w-full h-full border-0 filter grayscale invert contrast-125 opacity-90 hover:opacity-100 transition-opacity" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative z-10 bg-obsidian border-t border-white/10 pt-16 pb-12 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-white/10">
+                
+                <!-- Brand with Circular Logo -->
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-goldLuxury logo-cinematic-glow bg-obsidian flex items-center justify-center shrink-0">
+                        <!-- ضيفي هنا رابط الشعار الدائري -->
+                        <img src="1000257628.jpg" onerror="this.src='https://placehold.co/120x120/07090E/D4AF37?text=EW'" alt="شعار عز الوطن الدائري" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="text-xl font-black text-white">عز الوطن لتوصيل الطلبات</div>
+                        <div class="text-xs font-bold text-goldLight tracking-wider font-tajawal">Ezz Al Watan Delivery Services • Dubai, UAE</div>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-bold text-slate-400">
+                    <a href="#home" class="hover:text-goldLight transition-colors">الرئيسية</a>
+                    <a href="#partners" class="hover:text-goldLight transition-colors">شركاء النجاح</a>
+                    <a href="#advantages" class="hover:text-goldLight transition-colors">لماذا عز الوطن</a>
+                    <a href="#services" class="hover:text-goldLight transition-colors">الخدمات</a>
+                    <a href="#vision" class="hover:text-goldLight transition-colors">الرؤية والقيم</a>
+                    <a href="#contact" class="hover:text-goldLight transition-colors">تواصل معنا</a>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Details -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+                <p class="font-bold text-slate-300 font-tajawal">
+                    © 2026 عز الوطن لتوصيل الطلبات (Ezz Al Watan Delivery) • جميع الحقوق محفوظة
+                </p>
+                <p class="text-slate-400 font-tajawal">
+                    شارع بورسعيد، أمام ديرة سنتر، ديرة، دبي | هاتف: <span dir="ltr" class="font-bold text-goldLight">+971 56 899 0866</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON WITH TOOLTIP -->
+    <a href="https://wa.me/971568990866" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="تواصل معنا عبر واتساب"
+       class="whatsapp-float fixed bottom-6 left-6 z-50 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group">
+        <i class="fa-brands fa-whatsapp text-3xl sm:text-4xl"></i>
+        <!-- Hover Tooltip -->
+        <span class="hidden sm:block absolute left-20 whitespace-nowrap bg-navyCard text-white text-xs font-bold px-3.5 py-2 rounded-xl border border-[#25D366]/40 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg font-tajawal">
+            تواصل مع عز الوطن عبر الواتساب 24/7
+        </span>
+    </a>
+
+    <!-- INTERACTIVE JAVASCRIPT & 3D THREE.JS SCROLL-DRIVEN HIGHWAY & DELIVERY VAN -->
+    <script>
+        /**
+         * بناء مشهد ثلاثي الأبعاد (Three.js) لطريق سريع وسيارة توصيل فاخرة
+         * تسير السيارة من أعلى الموقع وتنزل مع المستخدم بالتزامن مع التمرير (Scroll) إلى أسفل الموقع
+         */
+        function init3DDeliveryHighway() {
+            const container = document.getElementById('three-road-canvas-container');
+            if (!container || typeof THREE === 'undefined') return;
+
+            try {
+                // 1. إعداد المشهد والكاميرا والمُصيّر (Renderer)
+                const scene = new THREE.Scene();
+                scene.fog = new THREE.FogExp2(0x07090E, 0.016);
+
+                const camera = new THREE.PerspectiveCamera(48, window.innerWidth / window.innerHeight, 0.1, 200);
+                camera.position.set(0, 7.5, 16);
+                camera.lookAt(0, 1.2, -10);
+
+                const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                renderer.shadowMap.enabled = true;
+                container.appendChild(renderer.domElement);
+
+                // 2. الإضاءة السينمائية الفاخرة (ذهبي وسماوي وأبيض)
+                const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
+                scene.add(ambientLight);
+
+                const dirLight = new THREE.DirectionalLight(0xFFF5C0, 1.4);
+                dirLight.position.set(12, 24, 15);
+                dirLight.castShadow = true;
+                scene.add(dirLight);
+
+                const cyanRimLight = new THREE.PointLight(0x00E5FF, 1.6, 45);
+                cyanRimLight.position.set(-10, 6, -15);
+                scene.add(cyanRimLight);
+
+                const goldRimLight = new THREE.PointLight(0xD4AF37, 2.0, 50);
+                goldRimLight.position.set(10, 8, 5);
+                scene.add(goldRimLight);
+
+                // 3. بناء الطريق ثلاثي الأبعاد الممتد بعمق منظوري
+                const roadGroup = new THREE.Group();
+                scene.add(roadGroup);
+
+                // أرضية الطريق الأسفلتية الداكنة
+                const roadLength = 180;
+                const roadWidth = 9.5;
+                const roadGeo = new THREE.PlaneGeometry(roadWidth, roadLength, 20, 60);
+                const roadMat = new THREE.MeshStandardMaterial({
+                    color: 0x0B0F19,
+                    roughness: 0.45,
+                    metalness: 0.65
+                });
+                const roadMesh = new THREE.Mesh(roadGeo, roadMat);
+                roadMesh.rotation.x = -Math.PI / 2;
+                roadMesh.position.z = -55;
+                roadMesh.receiveShadow = true;
+                roadGroup.add(roadMesh);
+
+                // حواف الطريق الذهبية المضيئة (يمين ويسار)
+                const borderGeo = new THREE.BoxGeometry(0.22, 0.16, roadLength);
+                const goldGlowMat = new THREE.MeshStandardMaterial({
+                    color: 0xD4AF37,
+                    emissive: 0xD4AF37,
+                    emissiveIntensity: 0.85,
+                    metalness: 0.9,
+                    roughness: 0.2
+                });
+
+                const leftCurb = new THREE.Mesh(borderGeo, goldGlowMat);
+                leftCurb.position.set(-roadWidth / 2, 0.08, -55);
+                roadGroup.add(leftCurb);
+
+                const rightCurb = new THREE.Mesh(borderGeo, goldGlowMat);
+                rightCurb.position.set(roadWidth / 2, 0.08, -55);
+                roadGroup.add(rightCurb);
+
+                // خطوط الطريق المتقطعة في المنتصف (تتحرك مع التمرير لتعطي إحساس السرعة)
+                const laneDashes = [];
+                const dashGeo = new THREE.PlaneGeometry(0.24, 3.2);
+                const dashMat = new THREE.MeshBasicMaterial({ color: 0xF3E5AB });
+                for (let z = 25; z > -135; z -= 7.5) {
+                    const dash = new THREE.Mesh(dashGeo, dashMat);
+                    dash.rotation.x = -Math.PI / 2;
+                    dash.position.set(0, 0.03, z);
+                    roadGroup.add(dash);
+                    laneDashes.push(dash);
+                }
+
+                // أعمدة إنارة ذهبية وسماوية على جانبي الطريق لإبراز العمق ثلاثي الأبعاد
+                const streetPoles = [];
+                const poleGeo = new THREE.CylinderGeometry(0.06, 0.08, 4.8, 8);
+                const poleMat = new THREE.MeshStandardMaterial({ color: 0x1E293B, metalness: 0.8, roughness: 0.3 });
+                const lampGeo = new THREE.SphereGeometry(0.22, 12, 12);
+                const lampMat = new THREE.MeshBasicMaterial({ color: 0xD4AF37 });
+
+                for (let z = 15; z > -125; z -= 18) {
+                    [-1, 1].forEach(side => {
+                        const poleGroup = new THREE.Group();
+                        const pole = new THREE.Mesh(poleGeo, poleMat);
+                        pole.position.y = 2.4;
+                        poleGroup.add(pole);
+
+                        const armGeo = new THREE.BoxGeometry(0.9, 0.06, 0.06);
+                        const arm = new THREE.Mesh(armGeo, poleMat);
+                        arm.position.set(-side * 0.4, 4.75, 0);
+                        poleGroup.add(arm);
+
+                        const lamp = new THREE.Mesh(lampGeo, lampMat);
+                        lamp.position.set(-side * 0.8, 4.7, 0);
+                        poleGroup.add(lamp);
+
+                        poleGroup.position.set(side * (roadWidth / 2 + 0.7), 0, z);
+                        roadGroup.add(poleGroup);
+                        streetPoles.push(poleGroup);
+                    });
+                }
+
+                // 4. بناء سيارة التوصيل الفاخرة ثلاثية الأبعاد (3D Luxury Delivery Van)
+                const vanGroup = new THREE.Group();
+                scene.add(vanGroup);
+
+                // خامات السيارة (أسود ميتاليك + لمسات ذهبية + زجاج داكن + إضاءة)
+                const bodyBlackMat = new THREE.MeshStandardMaterial({
+                    color: 0x0A0E17,
+                    metalness: 0.85,
+                    roughness: 0.22
+                });
+                const goldTrimMat = new THREE.MeshStandardMaterial({
+                    color: 0xD4AF37,
+                    emissive: 0x8A6D14,
+                    emissiveIntensity: 0.45,
+                    metalness: 0.92,
+                    roughness: 0.18
+                });
+                const glassMat = new THREE.MeshStandardMaterial({
+                    color: 0x00E5FF,
+                    emissive: 0x005577,
+                    emissiveIntensity: 0.35,
+                    metalness: 0.9,
+                    roughness: 0.1,
+                    transparent: true,
+                    opacity: 0.8
+                });
+
+                // صندوق الشحن الخلفي للسيارة
+                const cargoGeo = new THREE.BoxGeometry(2.15, 1.75, 3.3);
+                const cargoBox = new THREE.Mesh(cargoGeo, bodyBlackMat);
+                cargoBox.position.set(0, 1.25, -0.45);
+                cargoBox.castShadow = true;
+                vanGroup.add(cargoBox);
+
+                // شريط ذهبي فاخر على جانبي صندوق التوصيل
+                const sideStripeGeo = new THREE.BoxGeometry(2.2, 0.24, 3.34);
+                const sideStripe = new THREE.Mesh(sideStripeGeo, goldTrimMat);
+                sideStripe.position.set(0, 1.2, -0.45);
+                vanGroup.add(sideStripe);
+
+                // شعار/لوحة مضيئة أعلى سقف السيارة (Ezz Al Watan)
+                const roofSignGeo = new THREE.BoxGeometry(1.1, 0.26, 0.55);
+                const roofSign = new THREE.Mesh(roofSignGeo, goldTrimMat);
+                roofSign.position.set(0, 2.24, 0.4);
+                vanGroup.add(roofSign);
+
+                // مقدمة وكابينة القيادة الانسيابية
+                const cabinGeo = new THREE.BoxGeometry(2.05, 1.45, 1.45);
+                const cabinMesh = new THREE.Mesh(cabinGeo, bodyBlackMat);
+                cabinMesh.position.set(0, 1.08, 1.75);
+                vanGroup.add(cabinMesh);
+
+                // الزجاج الأمامي المائل
+                const windshieldGeo = new THREE.BoxGeometry(1.88, 0.72, 0.12);
+                const windshield = new THREE.Mesh(windshieldGeo, glassMat);
+                windshield.position.set(0, 1.42, 2.45);
+                windshield.rotation.x = -0.32;
+                vanGroup.add(windshield);
+
+                // صدام أمامي ذهبي رياضي
+                const bumperGeo = new THREE.BoxGeometry(2.12, 0.3, 0.3);
+                const bumper = new THREE.Mesh(bumperGeo, goldTrimMat);
+                bumper.position.set(0, 0.5, 2.45);
+                vanGroup.add(bumper);
+
+                // المصابيح الأمامية LED المضيئة وحزم الضوء على الطريق
+                const headlightGeo = new THREE.BoxGeometry(0.42, 0.18, 0.12);
+                const headlightMat = new THREE.MeshBasicMaterial({ color: 0xFFFBE0 });
+                const beamGeo = new THREE.ConeGeometry(1.1, 5.5, 16, 1, true);
+                const beamMat = new THREE.MeshBasicMaterial({
+                    color: 0xFFF5C0,
+                    transparent: true,
+                    opacity: 0.18,
+                    side: THREE.DoubleSide,
+                    depthWrite: false
+                });
+
+                [-0.72, 0.72].forEach(xPos => {
+                    const hl = new THREE.Mesh(headlightGeo, headlightMat);
+                    hl.position.set(xPos, 0.78, 2.5);
+                    vanGroup.add(hl);
+
+                    const beam = new THREE.Mesh(beamGeo, beamMat);
+                    beam.rotation.x = -Math.PI / 2 + 0.12;
+                    beam.position.set(xPos, 0.45, 5.2);
+                    vanGroup.add(beam);
+                });
+
+                // المصابيح الخلفية الحمراء المضيئة (تظهر بوضوح أثناء نزول السيارة)
+                const taillightGeo = new THREE.BoxGeometry(0.45, 0.22, 0.1);
+                const taillightMat = new THREE.MeshBasicMaterial({ color: 0xFF2A4B });
+                [-0.76, 0.76].forEach(xPos => {
+                    const tl = new THREE.Mesh(taillightGeo, taillightMat);
+                    tl.position.set(xPos, 0.85, -2.12);
+                    vanGroup.add(tl);
+                });
+
+                // العجلات الأربع مع جنوط ذهبية دوّارة
+                const wheels = [];
+                const tireGeo = new THREE.CylinderGeometry(0.42, 0.42, 0.32, 20);
+                const tireMat = new THREE.MeshStandardMaterial({ color: 0x05070B, roughness: 0.8 });
+                const rimGeo = new THREE.CylinderGeometry(0.24, 0.24, 0.34, 12);
+
+                const wheelPositions = [
+                    [-1.06, 0.42, 1.55],
+                    [1.06, 0.42, 1.55],
+                    [-1.06, 0.42, -1.25],
+                    [1.06, 0.42, -1.25]
+                ];
+
+                wheelPositions.forEach(([wx, wy, wz]) => {
+                    const wheelUnit = new THREE.Group();
+                    const tire = new THREE.Mesh(tireGeo, tireMat);
+                    tire.rotation.z = Math.PI / 2;
+                    wheelUnit.add(tire);
+
+                    const rim = new THREE.Mesh(rimGeo, goldTrimMat);
+                    rim.rotation.z = Math.PI / 2;
+                    wheelUnit.add(rim);
+
+                    wheelUnit.position.set(wx, wy, wz);
+                    vanGroup.add(wheelUnit);
+                    wheels.push(wheelUnit);
+                });
+
+                // 5. ربط حركة السيارة والطريق بالتمرير (Scroll) من أعلى الموقع إلى أسفله
+                let targetScrollRatio = 0;
+                let currentScrollRatio = 0;
+
+                function updateScrollTarget() {
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    if (docHeight > 0) {
+                        targetScrollRatio = Math.min(1, Math.max(0, window.scrollY / docHeight));
+                    }
+                }
+
+                window.addEventListener('scroll', updateScrollTarget, { passive: true });
+                updateScrollTarget();
+
+                // 6. حلقة التحريك المستمرة (Animation Loop)
+                let clock = new THREE.Clock();
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    const elapsed = clock.getElapsedTime();
+
+                    // تنعيم قيمة التمرير (Lerp) لحركة انسيابية فائقة
+                    currentScrollRatio += (targetScrollRatio - currentScrollRatio) * 0.08;
+
+                    // السيارة تبدأ من الأعلى/العمق في بداية الموقع وتنزل مع المستخدم إلى الأسفل في نهاية الموقع
+                    // المحور Z يتحرك من -28 (في الأعلى) إلى +8.5 (في الأسفل قريباً من المستخدم)
+                    const vanZ = -28 + (currentScrollRatio * 36.5);
+                    // حركة انحناء جانبية لطيفة على الطريق لإعطاء واقعية القيادة
+                    const vanX = Math.sin(currentScrollRatio * Math.PI * 2) * 1.45;
+                    // اهتزاز محرك خفيف جداً وواقعي
+                    const engineBob = Math.sin(elapsed * 14) * 0.015;
+
+                    vanGroup.position.set(vanX, engineBob, vanZ);
+
+                    // توجيه مقدمة السيارة مع انحناء المسار
+                    const steerAngle = Math.cos(currentScrollRatio * Math.PI * 2) * 0.14;
+                    vanGroup.rotation.y = steerAngle;
+
+                    // تدوير العجلات بناءً على التمرير والسرعة
+                    const wheelSpin = (currentScrollRatio * 45) + (elapsed * 2.5);
+                    wheels.forEach(w => {
+                        w.rotation.x = wheelSpin;
+                    });
+
+                    // تحريك خطوط الطريق والأعمدة لإعطاء إحساس بالسير المتواصل
+                    const roadSpeedOffset = (currentScrollRatio * 40 + elapsed * 3.5) % 7.5;
+                    laneDashes.forEach((dash, idx) => {
+                        dash.position.z = 25 - (idx * 7.5) + roadSpeedOffset;
+                    });
+
+                    const poleSpeedOffset = (currentScrollRatio * 40 + elapsed * 3.5) % 18;
+                    streetPoles.forEach((pole, idx) => {
+                        const pairIndex = Math.floor(idx / 2);
+                        pole.position.z = 15 - (pairIndex * 18) + poleSpeedOffset;
+                    });
+
+                    // تحريك الكاميرا بسلاسة لتتبع السيارة من أعلى الموقع إلى أسفله
+                    camera.position.y = 8.2 - (currentScrollRatio * 2.4);
+                    camera.position.z = 16.5 - (currentScrollRatio * 1.5);
+                    camera.lookAt(vanX * 0.4, 1.1, vanZ + 3.5);
+
+                    renderer.render(scene, camera);
+                }
+
+                // الاستجابة لتغيير حجم الشاشة (Responsive Resize)
+                window.addEventListener('resize', () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+
+                animate();
+            } catch (err) {
+                console.error('3D Scene Initialization Error:', err);
+            }
+        }
+
+        // Copy to Clipboard Function with Visual Feedback
+        function copyToClipboard(text, btnElement) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text);
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+            }
+            
+            const originalHTML = btnElement.innerHTML;
+            btnElement.innerHTML = '<i class="fa-solid fa-check text-green-400"></i> <span>تم النسخ!</span>';
+            btnElement.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/40');
+            
+            setTimeout(() => {
+                btnElement.innerHTML = originalHTML;
+                btnElement.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/40');
+            }, 2200);
+        }
+
+        window.addEventListener('load', () => {
+            // تشغيل المشهد ثلاثي الأبعاد للطريق والسيارة بعد اكتمال تحميل الصفحة
+            init3DDeliveryHighway();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Navbar Resize & Background Blur Accent on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-4');
+                } else {
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2');
+                }
+            }, { passive: true });
+
+            // IntersectionObserver Scroll Reveal Animations
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>
